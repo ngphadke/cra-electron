@@ -14,6 +14,9 @@ More research showed that there was an easy and understandable way to get this d
     * sets browser to none
     * runs `yarn start`
     * waits for the local server to start before running electron
+* Configure rescripts so that the React app knows it's running in Electron and not the browser
+    * `.rescriptsrc.js` modifies the CRA webpack config to change it's target to `electron-renderer` which gives the access to Node.js modules
+    * Changing the default `react-scripts` to `rescripts`
 
 # Thanks
 Many thanks to @msanatan for his brilliant piece on how to get this working. Found [here](https://msanatan.com/2020/04/19/accessing-nodejs-modules-with-create-react-app-and-electron/).
